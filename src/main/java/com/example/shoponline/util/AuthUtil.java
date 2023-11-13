@@ -16,6 +16,8 @@ import java.util.Optional;
  * @author mangvientrieu
  */
 public final class AuthUtil {
+	private AuthUtil() {
+	}
 
 	public static String hashPassword(String password) {
 		return DigestUtils.sha256Hex(password);

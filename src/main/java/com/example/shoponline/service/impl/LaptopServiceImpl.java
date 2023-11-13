@@ -17,22 +17,22 @@ public class LaptopServiceImpl implements LaptopService {
 	private final LaptopRepository laptopRepository;
 	@Override
 	public LaptopEntity create(LaptopEntity input) {
-		laptopRepository.save(input);
-		return null;
+		return laptopRepository.save(input);
 	}
 
 	@Override
 	public List<LaptopEntity> read() {
-		return null;
+		return laptopRepository.findAll();
 	}
 
 	@Override
 	public LaptopEntity update(LaptopEntity newValue) {
-		return null;
+		return laptopRepository.save(newValue);
 	}
 
 	@Override
 	public boolean delete(Long id) {
-		return false;
+		laptopRepository.deleteById(id);
+		return true;
 	}
 }
